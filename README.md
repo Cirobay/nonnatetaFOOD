@@ -12,7 +12,8 @@
 nonnatetaFOOD is a project based on Laravel 8.
 In the project are integrated,
 the AdminLTE control panel,
-Livewire and Jet Stream
+Livewire-Jet Stream
+and Spatie Permission
 
 ## GitHub Scope
 
@@ -42,10 +43,18 @@ ciroautuori@outlook.it
 
 -   **vendor@vendor.com** | password **11111111**
 
-## Objectives
+## Permission
 
--   **[Admin]('https://vehikl.com/')**
+-   **[Admin]('https://vehikl.com/')**  
+    - ALL
 
 ####
 
 -   **[Vendor]('https://vehikl.com/')**
+    - dash.home.index
+    - dash.todos.show
+    - dash.products.index
+    - dash.products.show
+    - dash.clients.index
+    - dash.clients.create
+    - dash.clients.show
