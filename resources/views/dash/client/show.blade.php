@@ -17,9 +17,10 @@
     <table class="table table-bordered">
         <tr>
             <th>No.</th>
-            <th> Comapny Name: </th>
-            <th> Company Mail: </th>
+            <th> Comapny Name</th>
+            <th> Company Mail</th>
             <th> Adress </th>
+            <th> Telephone</th>
             <th> Kvk Number</th>
         </tr>
         <tr>
@@ -28,6 +29,7 @@
             <td>{{ $client->company_name }}</td>
             <td>{{ $client->company_email }}</td>
             <td>{{ $client->company_adress }}</td>
+            <td>{{ $client->company_telephone }}</td>
             <td>{{ $client->company_kvk }}</td>
         </tr>
     </table>

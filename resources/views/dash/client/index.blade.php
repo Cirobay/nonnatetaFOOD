@@ -23,6 +23,7 @@
             <th>Company Name</th>
             <th>Company Mail</th>
             <th>Adress</th>
+            <th>Telephone</th>
             <th>Kvk Number</th>
             <th width="280px">Action</th>
         </tr>
@@ -32,6 +33,7 @@
                 <td>{{ $client->company_name }}</td>
                 <td>{{ $client->company_email }}</td>
                 <td>{{ $client->company_adress }}</td>
+                <td>{{ $client->company_telephone }}</td>
                 <td>{{ $client->company_kvk }}</td>
                 <td>
                     <form action="{{ route('dash.clients.destroy', $client->id) }}" method="POST">

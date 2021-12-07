@@ -13,6 +13,7 @@ class Client extends Model
         'company_name',
         'company_email',
         'company_adress',
+        'company_telephone',
         'company_kvk'
     ];
 }

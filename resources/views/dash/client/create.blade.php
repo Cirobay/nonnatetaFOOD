@@ -55,6 +55,13 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Telephone Number:</strong>
+                    <input type="number" name="company_telephone" class="form-control" placeholder="Telephone Number:">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Kvk Number:</strong>
                     <input type="number" name="company_kvk" class="form-control" placeholder="Kvk Number:">
                 </div>
