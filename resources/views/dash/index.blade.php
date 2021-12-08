@@ -124,7 +124,7 @@
                                     <td>{{ $todo->id }}</td>
                                     <td><strong>{{ $todo->todo }}</strong></td>
                                     <td>
-                                        <form action="" method="POST">
+                                        <form action="{{ route('dash.todos.destroy', $todo->id) }}" method="POST">
 
                                             @can('dash.todos.show')
                                                 <a class="btn btn-info"
@@ -138,10 +138,12 @@
                                             @endcan
 
                                             @can('dash.todos.destroy')
+
                                                 @csrf
                                                 @method('DELETE')
 
                                                 <button type="submit" class="btn btn-danger">Delete</button>
+
                                             @endcan
 
 
@@ -149,9 +151,6 @@
                                     </td>
                                 </tr>
                             @endforeach
-
-
-
 
                         </table>
                         {!! $todos->links() !!}
