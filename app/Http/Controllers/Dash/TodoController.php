@@ -35,7 +35,7 @@ class TodoController extends Controller
 
         Todo::create($request->all());
 
-        return redirect()->route('dash.todos.index')
+        return redirect()->route('dash.home')
             ->with('success', 'Product created successfully.');
     }
 
@@ -63,7 +63,7 @@ class TodoController extends Controller
 
         $todo->update($request->all());
 
-        return redirect()->route('dash.todos.index')
+        return redirect()->route('dash.home')
             ->with('success', 'Product updated successfully');
     }
 
@@ -73,7 +73,7 @@ class TodoController extends Controller
     {
         $todo->delete();
 
-        return redirect()->route('dash.todos.index')
+        return redirect()->route('dash.home')
             ->with('success', 'Product deleted successfully');
     }
 }
