@@ -34,19 +34,19 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome Prodotto:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Nome Prodotto">
+                    <input type="text" name="name" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Quantità:</strong>
+                    <input type="number" name="quantity" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome Prodotto:</strong>
-                    <input type="number" name="quantity" class="form-control" placeholder="Nome Prodotto">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nome Prodotto:</strong>
-                    <input type="number" name="price" class="form-control" placeholder="Nome Prodotto">
+                    <input type="number" step="any" name="price" class="form-control" placeholder="">
                 </div>
             </div>
 
