@@ -14,19 +14,6 @@
 @stop
 
 @section('content')
-
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <form action="{{ route('dash.products.store') }}" method="POST">
         @csrf
 
@@ -67,7 +54,17 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+            @endforeach
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '{{ $error }}',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+            </script>
+    @endif
 @stop

@@ -72,7 +72,7 @@
         <script>
             Swal.fire(
                 'Good job!',
-                'You clicked the button!',
+                'You added a customer',
                 'success'
             )
         </script>

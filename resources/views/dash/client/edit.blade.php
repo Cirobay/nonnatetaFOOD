@@ -17,9 +17,6 @@
 
 @section('content')
 
-
-
-
     <form action="{{ route('dash.clients.update', $client->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -81,11 +78,13 @@
 @section('js')
     @if ($errors->any())
         <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+            @endforeach
             <script>
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Something went wrong!',
+                    text: '{{ $error }}',
                     footer: '<a href="">Why do I have this issue?</a>'
                 })
             </script>

@@ -14,19 +14,6 @@
 @stop
 
 @section('content')
-
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <form action="{{ route('dash.clients.store') }}" method="POST">
         @csrf
 
@@ -35,35 +22,35 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Company Name:</strong>
-                    <input type="text" name="company_name" class="form-control" placeholder="Company Name:">
+                    <input type="text" name="company_name" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Company Mail:</strong>
-                    <input type="email" name="company_email" class="form-control" placeholder="Company Mail:">
+                    <input type="email" name="company_email" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Adress:</strong>
-                    <input type="text" name="company_adress" class="form-control" placeholder="Adress:">
+                    <input type="text" name="company_adress" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Telephone Number:</strong>
-                    <input type="number" name="company_telephone" class="form-control" placeholder="Telephone Number:">
+                    <input type="number" name="company_telephone" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Kvk Number:</strong>
-                    <input type="number" name="company_kvk" class="form-control" placeholder="Kvk Number:">
+                    <input type="number" name="company_kvk" class="form-control" placeholder="">
                 </div>
             </div>
 
@@ -84,7 +71,18 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+            @endforeach
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '{{ $error }}',
+                    footer: '<a href="">Why do I have this issue?</a>'
+
+                })
+            </script>
+    @endif
 @stop

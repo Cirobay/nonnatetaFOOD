@@ -680,7 +680,13 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+    @if ($message = Session::get('success'))
+        <script>
+            Swal.fire(
+                'Good job!',
+                'You added a todo',
+                'success'
+            )
+        </script>
+    @endif
 @stop
